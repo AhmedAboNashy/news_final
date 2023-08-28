@@ -32,6 +32,10 @@ dependencies:
   http: ^0.13.5
   cached_network_image: ^3.2.1
   intl: ^0.18.1
+  lottie: ^1.4.1
+  flutter_native_splash: ^2.2.5
+
+
 
 
   # The following adds the Cupertino Icons font to your application.

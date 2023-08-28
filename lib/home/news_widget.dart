@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:news/my_date_utils.dart';
 import '../api/model/news_response.dart';
 
 class NewsWidget extends StatelessWidget {
@@ -18,7 +19,7 @@ NewsWidget(this.news);
 
         Text(news.author??'',style: TextStyle(color: Color(0xff79828B),fontSize: 12),),
         Text(news.title??'',style: TextStyle(color: Color(0xff42505C),fontSize: 18,fontWeight: FontWeight.w500),),
-        Text(news.publishedAt??'',style: TextStyle(color: Color(0xff79828B),fontSize: 12),textAlign: TextAlign.end,),
+        Text(MyDateUtils.formatNewsDate(news.publishedAt??''),style: TextStyle(color: Color(0xff79828B),fontSize: 12),textAlign: TextAlign.end,),
       ],
       ),
     );
