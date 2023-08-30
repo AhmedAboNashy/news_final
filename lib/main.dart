@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'home/home_screen.dart';
+import 'package:news/home/home_screen.dart';
 
 void main() {
 
@@ -13,8 +12,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp( debugShowCheckedModeBanner: false,
-      routes: {HomeSceen.routeName: (_) => HomeSceen()},
-      initialRoute: HomeSceen.routeName,
+      theme: ThemeData(
+        primarySwatch: Colors.green
+      ),
+      routes: {HomeScreen.routeName: (_) =>HomeScreen()},
+      initialRoute: HomeScreen.routeName,
     );
   }
 }
