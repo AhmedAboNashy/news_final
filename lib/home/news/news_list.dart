@@ -35,7 +35,8 @@ class NewsList extends StatelessWidget {
                 }
 
                 return Expanded(
-                  child: ListView.builder(
+                  child: ListView.separated(
+                    separatorBuilder: (context, index) => Divider(color: Colors.grey,thickness: 1,),
                     itemBuilder: (_, index) {
                       return NewsWidget((data?.newsList![
                           index])!); // el proplem ely kanet wa2fa m3aya bsbb () lazem eldata klaha tb2a da5el (())

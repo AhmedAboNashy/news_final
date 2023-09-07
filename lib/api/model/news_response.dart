@@ -25,7 +25,7 @@ class NewsResponse {
         final Map<String, dynamic> data = new Map<String, dynamic>();
         data['status'] = this.status;
         data['totalResults'] = this.totalResults;
-        if (this.newsList != null) {
+        if (this.newsList!= null) {
             data['articles'] = this.newsList!.map((v) => v.toJson()).toList();
         }
         return data;

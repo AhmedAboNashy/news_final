@@ -24,7 +24,9 @@ class _SourcesTabsState extends State<SourcesTabs> {
             TabBar(
                 onTap: (index) {
                   selectedTab = index;
-                  setState(() {});
+                  setState(() {
+
+                  });
                 },
                 indicatorColor: Colors.transparent,
                 // el line ely tht el tabs

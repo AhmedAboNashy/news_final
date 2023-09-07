@@ -7,12 +7,11 @@ class ApiManager {
   static const String Base_url =
       'newsapi.org'; // mn elhagat elsabta f api web ely ana rayehlo
   static const String Api_key = '5f20b18586bf40e18217fbf878aedd36';
-  static Future<SourcesResponse> getNewsSources() async {
+  static Future<SourcesResponse> getNewsSources(String catId) async {
     // https://newsapi.org  /v2/top-headlines/sources  ?apiKey=5f20b18586bf40e18217fbf878aedd36    & category =sports
     var uri = Uri.https(Base_url, '/v2/top-headlines/sources', {
       'apiKey': Api_key,
-      'category': 'sports',
-
+      'category': catId,
     });
     // authority--> el website ely ana rayehlo ely how newsapi.orgs
     // unencodepath--> /v2/top-headlines/sources
@@ -34,7 +33,7 @@ class ApiManager {
         Base_url, '/v2/everything', {'apikey': Api_key, 'sources': sourceId});
     var response = await http.get(uri);
     var json = jsonDecode(response.body);
-var newsResponse=NewsResponse.fromJson(json);
+    var newsResponse = NewsResponse.fromJson(json);
 
     return newsResponse;
   }
