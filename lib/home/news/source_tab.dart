@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/api/model/SourcesResponse.dart';
 
 class SourceTab extends StatelessWidget {
@@ -12,7 +13,7 @@ class SourceTab extends StatelessWidget {
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(24),
           color: selected ? Theme.of(context).primaryColor : Colors.transparent,
-          border: Border.all(color: Theme.of(context).primaryColor, width: 2)),
+          border: Border.all(color: Theme.of(context).primaryColor, width: 2.w)),
       child: Text(
         source.name ?? '',
         style: TextStyle(

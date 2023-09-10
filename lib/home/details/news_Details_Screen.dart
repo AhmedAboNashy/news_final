@@ -15,18 +15,19 @@ class NewsDetailsScreen extends StatelessWidget {
 // 3l4a n3ml navigate between NewsDetailsScreen & NEwsWidget
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
-          bottom: Radius.circular(60),
+          bottom: Radius.circular(60.sp),
         )),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(9.0),
+        padding: EdgeInsets.all(17.0.sp),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(18.0),
+              borderRadius: BorderRadius.circular(18.0.sp),
               child: CachedNetworkImage(
                 imageUrl: news.urlToImage ?? "",
                 height: 225.h,
@@ -51,7 +52,7 @@ class NewsDetailsScreen extends StatelessWidget {
             SizedBox(height: 30.h),
             Text(
               MyDateUtils.formatNewsDate(news.publishedAt ?? ''),
-              style: TextStyle(color: Color(0xff79828B), fontSize: 12),
+              style: TextStyle(color: Color(0xff79828B), fontSize: 12.sp),
               textAlign: TextAlign.end,
             ),
             SizedBox(height: screenHight * .05),

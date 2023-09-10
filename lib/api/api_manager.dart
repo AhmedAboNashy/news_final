@@ -26,11 +26,21 @@ class ApiManager {
     return sourcesResponse;
   }
 
-  static Future<NewsResponse> getNewsBySourceId(String sourceId) async {
+  static Future<NewsResponse> getNews({
+    String? sourceId,
+    String? searchKeyword,
+    int? page,
+  }) async {
 // https://  newsapi.org   /v2/everything    ? sources=bbc-sport  &   apiKey=5f20b18586bf40e18217fbf878aedd36
 
-    var uri = Uri.https(
-        Base_url, '/v2/everything', {'apikey': Api_key, 'sources': sourceId});
+    var uri = Uri.https(Base_url, '/v2/everything', {
+      // lazem key yb2a nafs ely gay mn api
+      'apikey': Api_key,
+      'sources': sourceId,
+      'q': searchKeyword,
+      'pageSize': '20',
+      'page' : '$page',
+    });
     var response = await http.get(uri);
     var json = jsonDecode(response.body);
     var newsResponse = NewsResponse.fromJson(json);

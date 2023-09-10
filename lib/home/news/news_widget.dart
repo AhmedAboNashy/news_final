@@ -45,7 +45,7 @@ class NewsWidget extends StatelessWidget {
             SizedBox(height: 30.h),
             Text(
               MyDateUtils.formatNewsDate(news.publishedAt ?? ''),
-              style: TextStyle(color: Color(0xff79828B), fontSize: 12),
+              style: TextStyle(color: Color(0xff79828B), fontSize: 12.sp),
               textAlign: TextAlign.end,
             ),
           ],

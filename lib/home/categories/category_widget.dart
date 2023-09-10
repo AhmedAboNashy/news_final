@@ -8,14 +8,14 @@ class CategoryWidget extends StatelessWidget {
   CategoryWidget(this.category, this.index);
   @override
   Widget build(BuildContext context) {
-    return Container(padding: EdgeInsets.all(4).r,
+    return Container(padding: EdgeInsets.all(4.sp),
       decoration: BoxDecoration(
           color: category.color,
           borderRadius: BorderRadius.only(
               topRight: Radius.circular(24.sp),
               topLeft: Radius.circular(24.sp),
-              bottomLeft: Radius.circular(index.sp % 2 == 0 ? 24 : 0),
-              bottomRight: Radius.circular(index.sp % 2 == 0 ? 0 : 24))),
+              bottomLeft: Radius.circular(index.sp % 2 == 0 ? 24.sp : 0),
+              bottomRight: Radius.circular(index.sp % 2 == 0 ? 0 : 24.sp))),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

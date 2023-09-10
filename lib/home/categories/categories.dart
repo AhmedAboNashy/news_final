@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:news/home/categories/category_widget.dart';
 
 class CattegoriesFragment extends StatelessWidget {
@@ -8,10 +9,10 @@ class CattegoriesFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(12),
+      padding: EdgeInsets.all(12.r),
       child: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
+            crossAxisCount: 2, crossAxisSpacing: 20.sp, mainAxisSpacing: 20.sp),
         itemBuilder: (_, index) {
           return InkWell(
               onTap: () {
